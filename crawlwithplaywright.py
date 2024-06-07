@@ -1,3 +1,7 @@
+'''This code is to get all the url present from page 1 of a website to the mentioned page number
+You will have to provide the base url without the page number 
+and through inspect element find out the common class name where the links that you want are present'''
+
 from playwright.sync_api import sync_playwright
 import sys
 
@@ -18,9 +22,9 @@ def run(playwright):
         page.wait_for_selector(".gs_ri")
         
         # Extract the information
-        results = page.query_selector_all(".gs_ri")
+        results = page.query_selector_all(".gs_ri") 
         for result in results:
-            title_element = result.query_selector("h3.gs_rt")
+            title_element = result.query_selector("h3.gs_rt") #the common class name of the link
             title = title_element.text_content().strip()
             link_element = title_element.query_selector("a")
             link = link_element.get_attribute("href") if link_element else "No link available"

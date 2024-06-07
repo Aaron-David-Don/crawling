@@ -1,3 +1,4 @@
+'''This code extract all the url present in that website, like literally all the hyperlinks'''
 from playwright.sync_api import sync_playwright
 from urllib.parse import urljoin, urlparse
 from collections import deque

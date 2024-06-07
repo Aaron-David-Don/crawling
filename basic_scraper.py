@@ -1,8 +1,9 @@
+'''this code convert the webisite to markdown format(only 1 page)'''
 from firecrawl import FirecrawlApp
 
-app = FirecrawlApp(api_key="fc-33b4ec3c4b5a4e7fa5b40a66d95340cd")
+app = FirecrawlApp(api_key="use ur api key")
 
-# Crawl a website
+
 crawl_result = app.crawl_url('https://www.ncbs.res.in/', {'crawlerOptions': {'excludes': []}})
 
 # Get the markdown for each crawled page

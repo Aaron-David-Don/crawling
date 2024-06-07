@@ -1,4 +1,4 @@
-'''This code is same to extract_.py but here a time delay has been added
+'''This code is same to extract_url_from_pages-playwright.py but here a time delay has been added
 as when you try to scrape huge amount of data from google scholar,
 they'll ban your code to run on the specific IP address hence a time delay 
 that ranges from 3 to 6 seconds has been added  '''

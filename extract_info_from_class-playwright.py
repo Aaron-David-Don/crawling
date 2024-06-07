@@ -1,3 +1,8 @@
+'''This code is used to extract a specific type of info from websites
+It uses playwright to look for specific class name and extracts info from that.
+Here, this code is used to extract DOI links from several urls mentioned in a text file ( contains clean url after extracting 
+from several pages or hyperlink with the help of playwright ) '''
+
 from playwright.sync_api import sync_playwright
 
 def extract_links_from_file():

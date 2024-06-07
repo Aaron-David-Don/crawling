@@ -1,10 +1,11 @@
+'''While scraping certain website contain only partial url which is an issue 
+Therefore this code combines the partial url with the base url'''
 import re
 from urllib.parse import urljoin
 
 def extract_urls(markdown_content, base_url):
     url_pattern = re.compile(r'\[.*?\]\((.*?)\)')
     
-    # Find all matches
     matches = url_pattern.findall(markdown_content)
     for match in matches:
         # If the URL is partial, join it with the base URL

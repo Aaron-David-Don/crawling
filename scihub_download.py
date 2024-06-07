@@ -1,11 +1,10 @@
+'''This code is to download all the DOI files from SCIHUB
+a text file having all the DOI link should be provided  '''
 import time
 from scidownl import scihub_download
 
 def download_one_paper():
-    """Example of downloading one paper.
-    The paper will be downloaded the ./paper/ directory, and
-    the filename is one_paper.pdf
-    """
+    #downloading one paper.
     paper = "https://doi.org/10.1145/3375633"
     paper_type = "doi"
     out = "./paper/one_paper.pdf"
@@ -13,9 +12,8 @@ def download_one_paper():
 
 def download_multi_papers(url_file):
     """Example of downloading multiple papers.
-    All papers will be downloaded to the ./paper/ directory,
+    All papers will be downloaded paper folder
     and their filenames are the paper titles.
-    The URLs will be read from a provided text file.
     """
     with open(url_file, 'r') as file:
         urls = file.readlines()
@@ -34,5 +32,5 @@ def download_multi_papers(url_file):
             time.sleep(3.69)  # Adding a delay of 3 seconds after each download
 
 if __name__ == '__main__':
-    url_file = 'output\obilinkclean.txt'  # The text file containing the URLs
+    url_file = 'output\obilinkclean.txt'
     download_multi_papers(url_file)

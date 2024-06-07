@@ -1,3 +1,9 @@
+'''This code breaks the firecrawl 429 rapid rate issue
+as it wont let user scrape multiple websites.
+Hence with this code you can scrape how much ever you want
+provided there is all the url provided in a text file
+this can be acheived using either of my code- extract_all_urls-playwright_bfs.py or extract_url_from_pages-playwright.py'''
+
 import os
 from firecrawl import FirecrawlApp
 
@@ -5,9 +11,9 @@ with open('output\pubmed_url.txt', 'r') as file:
     urls = [line.strip() for line in file if line.strip()]
 
 api_keys = [
-    "fc-4d24b3ac55724dadabcdf816551b2c46",
-    "fc-33b4ec3c4b5a4e7fa5b40a66d95340cd",
-    "fc-1234567890abcdef1234567890abcdef",
+    "haha use ur api key 1",
+    "haha use ur api key 2",
+    "haha use ur api key 3",
 ]
 
 api_key_index = 0

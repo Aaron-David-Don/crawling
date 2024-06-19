@@ -4,9 +4,9 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const Replicate = require("replicate");
 const scrapingbee = require("scrapingbee");
-
+require('dotenv').config();
 const replicate = new Replicate({
-  auth: "r8_MyWDNACl5PUvMtlpA0tN7BziLCBsD1d33UVcd",
+  auth: process.env.REPLICATE_AUTH,
 });
 
 // Function to extract URLs from a CSV file
@@ -29,7 +29,7 @@ function extractUrlsFromCsv(filename, callback) {
 // Function to scrape text from a URL
 async function scrapeTextFromUrl(url) {
   try {
-    var client = new scrapingbee.ScrapingBeeClient("FM93UN8S47JPV7519EN1SX69I8NPHYCNLRFET535RE6SIR450WBDR20PBU82U9PD5I1FBUZEZ6YGD8OB");
+    var client = new scrapingbee.ScrapingBeeClient(process.env.SCRAPINGBEE_API_KEY);
     var response = await client.get({
       url: url,
       params: {},

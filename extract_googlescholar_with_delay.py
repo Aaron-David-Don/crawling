@@ -25,8 +25,8 @@ def run(playwright):
         if csvfile.tell() == 0:  # Check if the file is empty
             csvwriter.writerow(["Index", "Timestamp", "Title", "URL"])
         
-        index = 0
-        for i in range(0, 1000, 10):  # 0 to 90
+        index = 964
+        for i in range(964, 1000, 10):  # 0 to 90
             url = f"{base_url}{i}"  # Construct the URL for the current page
             page.goto(url)  
             
@@ -46,9 +46,7 @@ def run(playwright):
                 
                 index += 1
 
-                delay = random.uniform(1, 5)
-                print(f"Delaying for {delay} seconds...")
-                time.sleep(delay)
+
         
     browser.close()
 

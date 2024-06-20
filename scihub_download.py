@@ -32,5 +32,5 @@ def download_multi_papers(url_file):
             time.sleep(3.69)  # Adding a delay of 3 seconds after each download
 
 if __name__ == '__main__':
-    url_file = 'output\obilinkclean.txt'
+    url_file = "cleaned_dois.csv"
     download_multi_papers(url_file)

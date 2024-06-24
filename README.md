@@ -37,4 +37,7 @@ that ranges from 3 to 6 seconds has been added.
     - This code is to download all the DOI files from SCIHUB given a text file having all the DOI link
 
 12. **web_content.js**
-    - This code is to extract only the text content of a website 
+    - This code is to extract only the text content of a website
+      
+13. **select.js**
+    - This code is to extract the selected text from the website by the user

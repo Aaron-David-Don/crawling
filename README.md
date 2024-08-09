@@ -41,3 +41,6 @@ that ranges from 3 to 6 seconds has been added.
       
 13. **select.js**
     - This code is to extract the selected text from the website by the user
+      
+14. **LlmSanksrit.py**
+    - With help of ollama replicate and translate building a sanksrit chatbot

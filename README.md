@@ -47,3 +47,6 @@ that ranges from 3 to 6 seconds has been added.
 
 15. **makrdownn.py**
     - This code is used to convert html content to markdown format using markdownify
+
+16. **text2audio.py**
+    - This code converts text to audio

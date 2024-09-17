@@ -50,3 +50,6 @@ that ranges from 3 to 6 seconds has been added.
 
 16. **text2audio.py**
     - This code converts text to audio
+
+17. **web_content_Playwright.py**
+    - This code is to get the web page content using playwright 

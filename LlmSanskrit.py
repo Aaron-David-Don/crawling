@@ -7,7 +7,10 @@ from translate import Translator
 # Set UTF-8 encoding for stdout
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-replicate_client = replicate.Client(api_token="enter your api key")
+replicate_client = replicate.Client(api_token="use your api key")
+
+def split_into_sentences(text):
+    return text.split('.')
 
 def get_replicate_output(val):
     result = ""
@@ -39,7 +42,20 @@ val = input("Enter your prompt: ")
 
 replicate_output = get_replicate_output(val)
 
+sentences = split_into_sentences(replicate_output)
 
-translated_output = translate_to_sanskrit(replicate_output)
+with open("output.txt", "w", encoding="utf-8") as file:
+    file.write("Original Output :\n")
+    
+    for i, sentence in enumerate(sentences):
+        if sentence.strip():  # Avoid writing empty sentences
+            file.write(sentence.strip() + ".\n")
+    
+    file.write("\nSanskrit Output:\n")
+    
+    for i, sentence in enumerate(sentences):
+        if sentence.strip(): 
+            translated_sentence = translate_to_sanskrit(sentence.strip() + ".")
+            file.write(translated_sentence + "\n")
 
-print(translated_output)
+print("Results have been saved to output.txt")
